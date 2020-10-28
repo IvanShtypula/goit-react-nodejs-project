@@ -1,0 +1,143 @@
+.header {
+  background-color: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+.header__wrapper {
+  width: 280px;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__title {
+  color: rgb(0, 0, 0);
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  padding-left: 42px;
+  transition: color 0.3s linear;
+}
+
+.header__title:hover,
+.header__title:focus {
+  color: #24cca7;
+}
+
+.header__title::before {
+  position: absolute;
+  content: "";
+  background-image: url(../../images/icons/header/Logotype.svg);
+  background-size: cover;
+  display: block;
+  width: 30px;
+  height: 30px;
+  left: 0px;
+  top: -4px;
+}
+
+.header__login_wrapper {
+  display: flex;
+}
+
+.header__login_name {
+  font-size: 17px;
+  color: #bdbdbd;
+  margin-right: 12px;
+  font-family: "Montserrat";
+}
+
+.header__login_avatar {
+  display: none;
+}
+
+.header__logout_button {
+  cursor: pointer;
+  background-color: #ffffff;
+  background-size: cover;
+  border: none;
+  outline: none;
+  background-image: url(../../images/icons/header/Logout.svg);
+  display: block;
+  height: 18px;
+  width: 18px;
+}
+
+@media (min-width: 768px) {
+  .header__wrapper {
+    width: 688px;
+    height: 80px;
+  }
+
+  .header__title {
+    font-size: 30px;
+    padding-left: 60px;
+  }
+
+  .header__title::before {
+    width: 40px;
+    height: 40px;
+  }
+
+  .header__login_wrapper {
+    display: flex;
+    align-items: center;
+    padding-right: 78px;
+    position: relative;
+    right: -6px;
+  }
+
+  .header__login_name {
+    height: 20px;
+    position: relative;
+  }
+
+  .header__login_avatar {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-image: url(../../images/icons/header/empty_avatar.svg);
+    background-size: cover;
+    cursor: pointer;
+    margin-right: 12px;
+  }
+
+  .header__login_avatar_user {
+    border-radius: 50%;
+  }
+
+  .header__logout_button {
+    position: relative;
+  }
+
+  .header__logout_button::after {
+    content: "Выйти";
+    display: block;
+    height: 20px;
+    position: absolute;
+    top: -1px;
+    right: -78px;
+    color: #bdbdbd;
+    font-size: 20px;
+    font-family: "Montserrat";
+    transition: color 0.2s linear;
+  }
+
+  .header__logout_button:hover::after {
+    color: #000;
+  }
+}
+
+@media (min-width: 1280px) {
+  .header__wrapper {
+    width: 1110px;
+  }
+
+  .header__login_wrapper {
+    right: -19px;
+  }
+}
